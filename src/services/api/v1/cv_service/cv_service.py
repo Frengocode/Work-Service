@@ -8,6 +8,7 @@ import httpx
 import logging
 import asyncio
 from src.services.api.v1.cv_service.scheme import CvResponse
+from src.requests.request import GET_USER_REQUEST
 
 log = logging.getLogger(__name__)
 log.setLevel(logging.DEBUG)
@@ -115,7 +116,7 @@ class CvService:
             async with httpx.AsyncClient() as client:
                 headers = {"Authorization": f"Bearer {self.current_user.token}"}
                 response = await client.get(
-                    f"http://192.168.100.59:8000/user-service/api/v1/get-user/{user_id}/",
+                    f"{GET_USER_REQUEST}/{user_id}/",
                     headers=headers,
                 )
 
@@ -177,5 +178,3 @@ class CvService:
 
         return {"Updated Succsesfully"}
     
-
-

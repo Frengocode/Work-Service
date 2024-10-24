@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 
-DATABASE_URL = "postgresql+asyncpg://postgres:python$_venv@localhost:5432/ApplyDB"
+DATABASE_URL = "postgresql+asyncpg://username:password@port/ApplyDB"
 
 ApplyBASE  = declarative_base()
 

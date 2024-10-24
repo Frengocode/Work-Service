@@ -3,7 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 
-DATABASE_URL = "postgresql+asyncpg://postgres:python$_venv@localhost:5432/CvDB"
+DATABASE_URL = "postgresql+asyncpg://username:password@port/CvDB"
 
 CVServiceDB = declarative_base()
 

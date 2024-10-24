@@ -7,6 +7,7 @@ from src.services.api.v1.vacancy_service.scheme import WorkCategory, VacancyResp
 from sqlalchemy import select
 import asyncio
 import logging
+from src.requests.request import GET_USER_REQUEST
 
 log = logging.getLogger(__name__)
 
@@ -176,7 +177,7 @@ class VacancyService:
                 headers = {"Authorization": f"Bearer {self.current_user.token}"}
 
                 response = await client.get(
-                    f"http://192.168.100.59:8000/user-service/api/v1/get-user/{user_id}/",
+                    f"{GET_USER_REQUEST}/{user_id}/",
                     headers=headers,
                 )
 
@@ -348,3 +349,4 @@ class VacancyService:
         log.info("Deleted Succsesfully")
 
         return {"detail": "Deleted Sucsesfully"}
+    
