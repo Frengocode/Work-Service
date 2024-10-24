@@ -1,8 +1,8 @@
 from fastapi_mail import ConnectionConfig
 
 conf = ConnectionConfig(
-    MAIL_USERNAME="wendypython17@gmail.com",
-    MAIL_PASSWORD="wdgm uhxc juoj gwbk",
+    MAIL_USERNAME="yourgmail@gmail.com",
+    MAIL_PASSWORD="your-password",
     MAIL_FROM="your_email@gmail.com",
     MAIL_PORT=587,
     MAIL_SERVER="smtp.gmail.com",
